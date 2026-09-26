@@ -1,0 +1,103 @@
+FICHA DE INVESTIGAÇÃO
+O que viaja pela rede entre o seu clique e a página na tela
+
+Programação Web — Aula 1 de 20 · Arquitetura das Aplicações Web
+
+🎯 MISSÃO
+Você vai abrir as ferramentas de desenvolvedor do navegador e descobrir, por conta própria, o que acontece entre apertar Enter numa URL e ver a página pronta. Ninguém vai explicar antes — as respostas estão na tela.
+
+Escolha um site à sua livre escolha e mantenha o MESMO site nas 5 rodadas.
+Abra o DevTools: F12 (ou Ctrl+Shift+I) e vá para a aba Network.
+Preencha a ficha à mão, com suas palavras. Não há resposta "de gabarito".
+Errar aqui é esperado e não vale nota: a ficha é material de investigação, não prova.
+⏱️ Tempo: 40 minutos 👥 Formato: individual, conferindo cada rodada com o colega ao lado
+
+Nome: Paulo Henrique Martins Queiroga Turma: Ciência da Computação (Programação Web) Data: 14/08/2026
+
+RODADA 01 — A primeira requisição
+DevTools → aba Network → marcar "Disable cache" → recarregar a página (F5)
+
+A lista se enche de linhas. Olhe apenas a PRIMEIRA delas — é o documento que o navegador pediu quando você digitou o endereço.
+
+Name          Status   Type       Size      Time
+------------  ------   --------   -------   ------
+www.site.com   ___     document    ___ kB    ___ ms
+
+https://estudante.wyden.com.br/disciplinas/newtonpaiva\_15069684/conteudos   
+
+304 Not Modified
+document
+
+0.5kB    
+
+142ms
+
+Sua análise:
+
+Qual é o método HTTP e o status code dessa primeira requisição? OBTER
+Qual o tamanho dela em kB? Ela é a maior da lista? 0,5kb, Não.
+Some o total transferido pela página (barra inferior do DevTools). Quantas requisições foram, no total? 153
+RODADA 02 — O que vem depois
+Usar os filtros do topo da aba Network: All · Doc · CSS · JS · Img · Font
+
+O navegador pediu muito mais do que você digitou. Classifique o que veio depois e conte cada tipo.
+
+Doc  (HTML) .......... ____ requisicoes
+CSS  (estilo) ........ ____ requisicoes
+JS   (comportamento) . ____ requisicoes
+Img  (imagens) ....... ____ requisicoes
+Font (tipografia) .... ____ requisicoes
+Sua análise:
+
+Ninguém clicou nesses arquivos. Quem, então, pediu por eles? O cliente
+Há requisições para endereços de OUTROS domínios? Anote um deles e arrisque um palpite sobre o que seja. Sim, https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700\&família=Trabalho+Sans:wght@400; 500; 600\&display=swap, estilização.
+RODADA 03 — Anatomia de um pedido e de uma resposta
+Clicar em qualquer linha da lista → aba Headers → seções General e Response Headers
+
+Cada linha da lista esconde uma conversa em texto puro. É isso que trafega na rede:
+
+GET /index.html HTTP/1.1          <- o pedido do navegador
+Host: www.site.com
+User-Agent: Mozilla/5.0 ...
+
+HTTP/1.1 200 OK                   <- a resposta do servidor
+Content-Type: text/html; charset=utf-8
+Content-Length: 48213
+Server: nginx
+
+<!DOCTYPE html> ...               <- o conteudo, finalmente
+Sua análise:
+
+Na requisição que você escolheu, qual o valor de Content-Type? Texto/HTML
+Qual servidor respondeu (header Server)? Código de status Eo? AmazonS3, 200.
+Compare o Content-Type de um arquivo CSS com o de uma imagem. O que muda? texto/CSS; Charset=UTF-8 | imagem/vnd.microsoft.icon
+RODADA 04 — Quando alguma coisa dá errado
+Na barra de endereços, acrescentar /pagina-que-nao-existe-123 ao domínio e dar Enter
+
+Com o DevTools aberto, observe a requisição da página inexistente. O servidor respondeu — só não respondeu o que você queria.
+
+HTTP/1.1 ___ ________            <- preencha status e mensagem
+
+Compare com a rodada 01:
+  rodada 01 -> status ______
+  rodada 04 -> status ______
+Sua análise:
+
+O servidor está no ar ou for a do ar? Como você sabe? Está no ar, porque respondeu à requisição com o erro 404.
+O erro foi de quem pediu ou de quem respondeu? Justifique. Foi de quem pediu, pois tentou acessar um conteúdo que não foi encontrado.
+Se o status fosse 500 em vez do que você anotou, a conclusão seria a mesma? Por quê? Não. O erro 500 indicaria um problema interno no servidor.
+RODADA 05 — Quem faz o quê na página
+DevTools → Ctrl+Shift+P → digitar "Disable CSS" → Enter. Depois recarregue para desfazer.
+
+Este é o experimento que separa as três tecnologias da web. Observe a página antes e depois:
+
+COM CSS                    SEM CSS
+-----------------------    -----------------------
+cores, colunas, fontes     ______________________
+menu na horizontal         ______________________
+textos e links             ______________________
+Sua análise:
+
+O texto e as imagens desapareceram junto com o CSS? O que isso diz sobre onde o CONTEÚDO mora? Não. O conteúdo continua na página, pois fica no HTML.
+Descreva em uma frase o papel do CSS, com base apenas no que você acabou de ver. O CSS cuida da aparência e da organização da página.
+Ainda restou algum comportamento (menu que abre, botão que responde)? De qual das três tecnologias ele vem? Sim. Esses comportamentos vêm do JavaScript.
