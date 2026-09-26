@@ -1,0 +1,226 @@
+:root {
+  /* Cores */
+  --cor-fundo: #000000;
+  --cor-fundo-campo: #1a1a1a;
+  --cor-fundo-card: #111111;
+  --cor-texto: #ffffff;
+  --cor-texto-suave: #cccccc;
+  --cor-destaque: #0066cc;
+  --cor-destaque-escura: #004c99;
+  --cor-destaque-clara: #3399ff;
+  --cor-borda: #666666;
+
+  /* Tipografia */
+  --fonte-base: Arial, Helvetica, sans-serif;
+  --tamanho-titulo: 22px;
+  --tamanho-texto: 14px;
+
+  /* Espaçamentos */
+  --espaco-pp: 5px;
+  --espaco-p: 8px;
+  --espaco-m: 15px;
+  --espaco-g: 25px;
+
+  /* Largura máxima do conteúdo */
+  --largura-conteudo: 900px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fonte-base);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-size: var(--tamanho-texto);
+  line-height: 1.5;
+}
+
+/* Cabeçalho e navegação (Flexbox) */
+.cabecalho {
+  border-bottom: 1px solid var(--cor-destaque);
+  padding: var(--espaco-m);
+}
+
+.cabecalho-interno {
+  max-width: var(--largura-conteudo);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-m);
+}
+
+.logo {
+  color: var(--cor-destaque-clara);
+  font-size: var(--tamanho-titulo);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-m);
+  list-style: none;
+}
+
+.menu a {
+  color: var(--cor-texto);
+  text-decoration: none;
+  padding: var(--espaco-pp) var(--espaco-p);
+}
+
+.menu a:hover {
+  color: var(--cor-destaque-clara);
+}
+
+.menu a.ativo {
+  color: var(--cor-destaque-clara);
+  border-bottom: 2px solid var(--cor-destaque);
+}
+
+/* Foco visível para acessibilidade */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--cor-destaque-clara);
+  outline-offset: 2px;
+}
+
+/* Conteúdo principal */
+.conteudo {
+  max-width: var(--largura-conteudo);
+  margin: 0 auto;
+  padding: var(--espaco-g) var(--espaco-m);
+}
+
+.titulo-pagina {
+  color: var(--cor-destaque-clara);
+  font-size: var(--tamanho-titulo);
+  border-bottom: 1px solid var(--cor-destaque);
+  padding-bottom: var(--espaco-p);
+  margin-bottom: var(--espaco-g);
+}
+
+.texto {
+  color: var(--cor-texto-suave);
+  margin-bottom: var(--espaco-m);
+}
+
+/* Página inicial */
+.destaque-inicio {
+  margin-bottom: var(--espaco-g);
+}
+
+.botao-link {
+  display: inline-block;
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto);
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 15px;
+}
+
+.botao-link:hover {
+  background-color: var(--cor-destaque-escura);
+}
+
+/* Listagem de agentes (Grid) */
+.lista-agentes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaco-m);
+}
+
+.card {
+  background-color: var(--cor-fundo-card);
+  border: 1px solid var(--cor-borda);
+  padding: var(--espaco-m);
+}
+
+.card h3 {
+  color: var(--cor-destaque-clara);
+  margin-bottom: var(--espaco-p);
+}
+
+.card p {
+  margin-bottom: var(--espaco-pp);
+}
+
+.card .rotulo {
+  color: var(--cor-texto-suave);
+}
+
+/* Formulário */
+.formulario {
+  max-width: 500px;
+}
+
+.campo {
+  margin-bottom: var(--espaco-m);
+}
+
+.campo label {
+  display: block;
+  margin-bottom: var(--espaco-pp);
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: var(--espaco-p);
+  background-color: var(--cor-fundo-campo);
+  color: var(--cor-texto);
+  border: 1px solid var(--cor-borda);
+  font-size: var(--tamanho-texto);
+  font-family: var(--fonte-base);
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border-color: var(--cor-destaque);
+}
+
+.campo textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto);
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: var(--espaco-pp);
+}
+
+button:hover {
+  background-color: var(--cor-destaque-escura);
+}
+
+/* Rodapé */
+.rodape {
+  border-top: 1px solid var(--cor-destaque);
+  padding: var(--espaco-m);
+  text-align: center;
+  color: var(--cor-texto-suave);
+}
+
+/* Breakpoint 1: tablets */
+@media (min-width: 600px) {
+  .lista-agentes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Breakpoint 2: telas maiores */
+@media (min-width: 900px) {
+  .lista-agentes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
