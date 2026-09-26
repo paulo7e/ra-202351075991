@@ -27,10 +27,4 @@ agentes em cards e uma página com o formulário de cadastro.
 2. Abra o arquivo `index.html` no navegador (duplo clique ou arraste para a aba).
 3. Navegue entre as páginas pelo menu no topo.
 
-## Uso de IA
 
-- Ferramentas usadas: GitHub Copilot.
-- Onde ajudou: gerou o esqueleto das páginas HTML, o formulário de cadastro e a
-  estrutura do CSS com custom properties, Flexbox e Grid.
-- O que eu revisei/reescrevi: conferi os campos do formulário, os dados dos
-  agentes e ajustei cores e espaçamentos para manter o visual simples pedido.
