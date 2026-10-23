@@ -1,4 +1,5 @@
 ﻿import './App.css'
+import Saudacao from './components/Saudacao'
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       </header>
 
       <section>
-        <h2>Bem-vindo ao sistema de agentes virtuais</h2>
+        <Saudacao nome="equipe de agentes virtuais" />
         <p>
           Organize e consulte os agentes virtuais da equipe em um só lugar.
         </p>
