@@ -3,13 +3,30 @@ import agentes from "./dados/agentes";
 import Cabecalho from "./componentes/Cabecalho";
 import ListaCards from "./componentes/ListaCards";
 import Rodape from "./componentes/Rodape";
+import Formulario from "./componentes/formulario";
+
+
 
 function App() {
+  const [agentesCadastrados, setAgentesCadastrados] = useState(agentes);
+
   const [busca, setBusca] = useState("");
 
-  const agentesFiltrados = agentes.filter((agente) =>
+  const agentesFiltrados = agentesCadastrados.filter((agente) =>
     agente.nome.toLowerCase().includes(busca.toLowerCase())
   );
+
+  function cadastrarAgente(novoAgente) {
+  const agenteComId = {
+    ...novoAgente,
+    id: Date.now()
+  };
+
+  setAgentesCadastrados((listaAtual) => [
+    ...listaAtual,
+    agenteComId
+  ]);
+}
 
   return (
     <>
@@ -24,7 +41,7 @@ function App() {
           value={busca}
           onChange={(evento) => setBusca(evento.target.value)}
         />
-
+        <Formulario onCadastrar={cadastrarAgente} />
         <ListaCards agentes={agentesFiltrados} />
       </main>
 
