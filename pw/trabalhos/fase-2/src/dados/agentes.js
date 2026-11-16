@@ -1,67 +1,67 @@
 const agentes = [
   {
     id: 1,
-    nome: "Aurora",
-    especialidade: "Atendimento ao Cliente",
-    tarefa: "Responder dúvidas e chamados",
-    responsavel: "Marina Alves",
-    matricula: "20240001"
+    nome: "Amanda",
+    especialidade: "Rastreio de erros de processos produtivos",
+    tarefa: "identificar e responder motivo de erros no sistema Protheus, referente a Produção",
+    responsavel: "Paulo Henrique",
+    FontedosDados: "SB2, SB1, SD3, SD4, SC2, ZCC, ZCD e USR_SYSTEM"
   },
   {
     id: 2,
-    nome: "Vulcano",
-    especialidade: "Suporte Técnico",
-    tarefa: "Diagnosticar problemas de TI",
-    responsavel: "Carlos Mendes",
-    matricula: "20240002"
+    nome: "Otávio",
+    especialidade: "Gestão de estoque",
+    tarefa: "Diagnosticar erros de Acuracidade de estoque",
+    responsavel: "Paulo Henrique",
+    FontedosDados: "SB2 e ZET"
   },
   {
     id: 3,
-    nome: "Íris",
-    especialidade: "Recursos Humanos",
-    tarefa: "Triagem de currículos",
-    responsavel: "Fernanda Lima",
-    matricula: "20240003"
+    nome: "José",
+    especialidade: "Gestão Fiscal",
+    tarefa: "Identificar motivos de erros e inconsistências em notas fiscais",
+    responsavel: "Paulo Henrique",
+    FontedosDados: "SC5,SC6,SB1,SA1"
   },
   {
     id: 4,
-    nome: "Órion",
-    especialidade: "Financeiro",
-    tarefa: "Emitir relatórios e conciliação",
-    responsavel: "Rafael Souza",
-    matricula: "20240004"
+    nome: "Charles",
+    especialidade: "Gestão de Usuários",
+    tarefa: "Informar dados de usuários no sistema Protheus",
+    responsavel: "Paulo Henrique",
+    FontedosDados: "USR_SYSTEM"
   },
   {
     id: 5,
-    nome: "Nébula",
-    especialidade: "Marketing",
-    tarefa: "Criar textos e campanhas",
+    nome: "Hytor",
+    especialidade: "Assistência Interna",
+    tarefa: "Auxiliar a tirar dúvida de Processos Políticas e Assuntos internos da Empresa",
     responsavel: "Juliana Rocha",
-    matricula: "20240005"
+    FontedosDados: "Documentos e instruções de trabalho internas."
   },
   {
     id: 6,
     nome: "Atlas",
     especialidade: "Logística",
     tarefa: "Rastrear entregas e estoque",
-    responsavel: "Bruno Carvalho",
-    matricula: "20240006"
+    responsavel: "Paulo Henrique",
+    FontedosDados: "20240006"
   },
   {
     id: 7,
     nome: "Lótus",
     especialidade: "Saúde",
     tarefa: "Agendar consultas e lembretes",
-    responsavel: "Patrícia Gomes",
-    matricula: "20240007"
+    responsavel: "Paulo Henrique",
+    FontedosDados: "20240007"
   },
   {
     id: 8,
     nome: "Cronos",
     especialidade: "Agenda",
     tarefa: "Organizar compromissos e reuniões",
-    responsavel: "Diego Fernandes",
-    matricula: "20240008"
+    responsavel: "Paulo Henrique",
+    FontedosDados: "20240008"
   }
 ];
 

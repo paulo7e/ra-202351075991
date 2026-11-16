@@ -19,8 +19,8 @@ function Card({ agente }) {
       </p>
 
       <p>
-        <span className="rotulo">Matrícula:</span>{" "}
-        {agente.matricula}
+        <span className="rotulo">Fonte dos Dados:</span>{" "}
+        {agente.FontedosDados}
       </p>
     </article>
   );
