@@ -12,15 +12,17 @@ function Formulario({ onCadastrar }) {
   function cadastrar(evento) {
     evento.preventDefault();
 
-    if (nome.trim().length < 3) {
-      alert("O nome deve ter pelo menos 3 caracteres.");
-      return;
-    }
-
-    if (!especialidade.trim() || !tarefa.trim()) {
-      alert("Preencha a especialidade e a tarefa.");
-      return;
-    }
+    if (
+  !nome.trim() ||
+  !especialidade.trim() ||
+  !tarefa.trim() ||
+  !responsavel.trim() ||
+  !fonteDosDados.trim()
+) {
+  alert("Preencha todos os campos antes de cadastrar.");
+  return;
+}
+   
 
     onCadastrar({
       nome,

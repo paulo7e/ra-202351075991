@@ -3,7 +3,7 @@ import agentes from "./dados/agentes";
 import Cabecalho from "./componentes/Cabecalho";
 import ListaCards from "./componentes/ListaCards";
 import Rodape from "./componentes/Rodape";
-import Formulario from "./componentes/formulario";
+import Formulario from "./componentes/Formulario";
 
 
 

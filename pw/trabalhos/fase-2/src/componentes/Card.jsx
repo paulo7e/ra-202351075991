@@ -20,7 +20,7 @@ function Card({ agente }) {
 
       <p>
         <span className="rotulo">Fonte dos Dados:</span>{" "}
-        {agente.FontedosDados}
+        {agente.FonteDosDados}
       </p>
     </article>
   );
