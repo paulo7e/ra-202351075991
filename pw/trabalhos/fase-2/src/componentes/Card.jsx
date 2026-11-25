@@ -1,4 +1,5 @@
-function Card({ agente }) {
+
+function Card({ agente, onCurtir }) {
   return (
     <article className="card">
       <h3>{agente.nome}</h3>
@@ -22,9 +23,14 @@ function Card({ agente }) {
         <span className="rotulo">Fonte dos Dados:</span>{" "}
         {agente.FonteDosDados}
       </p>
+
+      <button onClick={() => onCurtir(agente.id)}>
+        {agente.curtiu ? "Descurtir" : "Curtir"} ❤️
+      </button>
+
+      <p>Curtidas: {agente.curtidas}</p>
     </article>
   );
 }
 
 export default Card;
-
