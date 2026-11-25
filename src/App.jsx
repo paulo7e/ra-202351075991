@@ -14,7 +14,7 @@ function App() {
       </header>
 
       <section>
-        <Saudacao nome="equipe de agentes virtuais" />
+        <Saudacao nome="Administrador" />
         <p>
           Organize e consulte os agentes virtuais da equipe em um só lugar.
         </p>
