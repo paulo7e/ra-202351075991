@@ -21,7 +21,7 @@ function Card({ agente, onCurtir }) {
 
       <p>
         <span className="rotulo">Fonte dos Dados:</span>{" "}
-        {agente.FonteDosDados}
+        {agente.fonteDosDados}
       </p>
 
       <button onClick={() => onCurtir(agente.id)}>

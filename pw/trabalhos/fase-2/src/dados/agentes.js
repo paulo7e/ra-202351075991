@@ -5,7 +5,7 @@ const agentes = [
     especialidade: "Rastreio de erros de processos produtivos",
     tarefa: "identificar e responder motivo de erros no sistema Protheus, referente a Produção",
     responsavel: "Paulo Henrique",
-    FontedosDados: "SB2, SB1, SD3, SD4, SC2, ZCC, ZCD e USR_SYSTEM"
+    fonteDosDados: "SB2, SB1, SD3, SD4, SC2, ZCC, ZCD e USR_SYSTEM"
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const agentes = [
     especialidade: "Gestão de estoque",
     tarefa: "Diagnosticar erros de Acuracidade de estoque",
     responsavel: "Paulo Henrique",
-    FontedosDados: "SB2 e ZET"
+    fonteDosDados: "SB2 e ZET"
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const agentes = [
     especialidade: "Gestão Fiscal",
     tarefa: "Identificar motivos de erros e inconsistências em notas fiscais",
     responsavel: "Paulo Henrique",
-    FontedosDados: "SC5,SC6,SB1,SA1"
+    fonteDosDados: "SC5,SC6,SB1,SA1"
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const agentes = [
     especialidade: "Gestão de Usuários",
     tarefa: "Informar dados de usuários no sistema Protheus",
     responsavel: "Paulo Henrique",
-    FontedosDados: "USR_SYSTEM"
+    fonteDosDados: "USR_SYSTEM"
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const agentes = [
     especialidade: "Assistência Interna",
     tarefa: "Auxiliar a tirar dúvida de Processos Políticas e Assuntos internos da Empresa",
     responsavel: "Juliana Rocha",
-    FontedosDados: "Documentos e instruções de trabalho internas."
+    fonteDosDados: "Documentos e instruções de trabalho internas."
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ const agentes = [
     especialidade: "Logística",
     tarefa: "Rastrear entregas e estoque",
     responsavel: "Paulo Henrique",
-    FontedosDados: "20240006"
+    fonteDosDados: "20240006"
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ const agentes = [
     especialidade: "Saúde",
     tarefa: "Agendar consultas e lembretes",
     responsavel: "Paulo Henrique",
-    FontedosDados: "20240007"
+    fonteDosDados: "20240007"
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ const agentes = [
     especialidade: "Agenda",
     tarefa: "Organizar compromissos e reuniões",
     responsavel: "Paulo Henrique",
-    FontedosDados: "20240008"
+    fonteDosDados: "20240008"
   }
 ];
 
